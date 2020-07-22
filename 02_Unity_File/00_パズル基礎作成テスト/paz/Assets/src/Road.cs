@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Road
+public class Road 
 {
   private int x;
   private int y;
