@@ -112,8 +112,8 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 742
-  m_MinSize: {x: 678, y: 342}
-  m_MaxSize: {x: 12003, y: 8042}
+  m_MinSize: {x: 677, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
   controlID: 15
 --- !u!114 &6
@@ -137,8 +137,8 @@ MonoBehaviour:
     y: 0
     width: 1147
     height: 742
-  m_MinSize: {x: 403, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 402, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
   controlID: 16
 --- !u!114 &7
@@ -162,8 +162,8 @@ MonoBehaviour:
     y: 0
     width: 1147
     height: 468
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
   controlID: 17
 --- !u!114 &8
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 0
     width: 863
     height: 468
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -239,14 +239,14 @@ MonoBehaviour:
     y: 468
     width: 1147
     height: 274
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -394,9 +394,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f472ffff0e75ffff0e7bffff1e7dffff1cb0ffff44b4ffff84b6ffff74b9ffffb2b9ffffccbaffffc8bbffff3ad6ffffe8e0ffff6afbffff
+      m_SelectedIDs: 56330000
+      m_LastClickedID: 13142
+      m_ExpandedIDs: 6837ffff0c38ffff8859ffff8e5affff42a5ffff24a6ffff42a7ffff5ca8ffff6eb8ffff8ac8ffff5acaffff82caffff8eccffff72ceffff1ad4ffffc4f1fffff0f3ffffeef7ffff6afbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -412,7 +412,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -456,9 +456,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.26981658, y: -0.113646716, z: -0.07368397}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 0.26981658, y: -0.113646716, z: -0.07368397}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,13 +504,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.2811043, y: -0.23252173, z: 0.070404425, w: 0.92842925}
+    m_Target: {x: 0.31281236, y: 0.3898375, z: -0.142744, w: 0.8543002}
     speed: 2
-    m_Value: {x: 0.281101, y: -0.23251899, z: 0.07040359, w: 0.9284183}
+    m_Value: {x: 0.31280774, y: 0.38983175, z: -0.14274189, w: 0.85428756}
   m_Size:
-    m_Target: 9.4270525
+    m_Target: 5.172246
     speed: 2
-    m_Value: 9.4270525
+    m_Value: 5.172246
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -558,8 +558,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 284
     y: 75
-    width: 859
-    height: 448
+    width: 861
+    height: 447
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &16
 MonoBehaviour:
@@ -600,20 +600,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/src
+    - Assets/mat
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/src
+  - Assets/mat
   m_LastFoldersGridSize: -1
   m_LastProjectPath: "/Users/nittaichito/UnityGame_Project1/02_Unity_File/00_\u30CF\u309A\u30B9\u3099\u30EB\u57FA\u790E\u4F5C\u6210\u30C6\u30B9\u30C8/paz"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c340000
-    m_LastClickedID: 13340
-    m_ExpandedIDs: 0000000012340000
+    m_SelectedIDs: 28340000
+    m_LastClickedID: 13352
+    m_ExpandedIDs: 00000000223400005c360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,7 +641,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000012340000
+    m_ExpandedIDs: 0000000022340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -668,8 +668,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000c2270000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000c227000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

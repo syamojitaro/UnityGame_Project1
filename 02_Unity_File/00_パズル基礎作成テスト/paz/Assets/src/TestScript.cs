@@ -2,17 +2,45 @@ using UnityEngine;
 
 public class TestScript : MonoBehaviour {
     //クリックしたとき
-    void OnMouseDown()
-    {
-        Debug.Log("OnMouseDown");
-        transform.Translate(0,0.1f,0);
-    }
+    //マウスが乗った時
+void OnMouseEnter()
+{
+    Debug.Log("OnMouseEnter");
+}
 
-    public int get(){
-      return 0;
-    }
+//マウスが乗っている間、呼び出され続ける
+void OnMouseOver()
+{
+    Debug.Log("OnMouseOver");
+}
 
-    void Update(){
-      //transform.Translate(0,0.005f,0);
-    }
+//マウスが離れたとき
+void OnMouseExit()
+{
+    Debug.Log("OnMouseExit");
+}
+
+//クリックしたとき
+void OnMouseDown()
+{
+    Debug.Log("OnMouseDown");
+}
+
+//クリックしてから、指を離したとき
+void OnMouseUp()
+{
+    Debug.Log("OnMouseUp");
+}
+
+//クリックした後、”オブジェクト上で”　指を離したとき
+void OnMouseUpAsButton()
+{
+    Debug.Log("MouseUpAsButton");
+}
+
+//クリックしてドラッグをしている間、呼び出され続ける
+void OnMouseDrag()
+{
+    Debug.Log("MouseDrag");
+}
 }

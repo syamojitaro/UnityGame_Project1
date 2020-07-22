@@ -13,6 +13,7 @@ public class MakeField : MonoBehaviour
     readonly private int Y = 3;
     readonly private int X = 5;
     public Road[,] field = new Road[3,5];
+    public GameObject[,] field_ob = new GameObject[3,5];
     public GameObject roadsObj_p;
     public GameObject roadsObj;
 
@@ -30,7 +31,7 @@ public class MakeField : MonoBehaviour
     void Update()
     {
       this.a += Time.deltaTime;
-      if(this.a >5){
+      if(this.a >50){
         this.a = 0;
         remakeField();
       }
@@ -44,7 +45,7 @@ public class MakeField : MonoBehaviour
           field[y,x] = new Road(x,y,ran);
         }
       }
-      for(int y=0;y<Y;y++){
+      /*for(int y=0;y<Y;y++){
         for(int x = 0;x<X;x++){
           GameObject g;
           if(field[y,x].getType() == 0){
@@ -65,8 +66,23 @@ public class MakeField : MonoBehaviour
             g.transform.Rotate(0,field[y,x].getDeg(),0);
           }
         }
-      }
+      }*/
+      for(int y=0;y<Y;y++){
+        for(int x = 0;x<X;x++){
+          if(field[y,x].getType() == 0){
+            field_ob[y,x] = Instantiate(st, roadsObj.transform);
+          }else if(field[y,x].getType() == 1){
+            field_ob[y,x] = Instantiate(r, roadsObj.transform);
+          }else if(field[y,x].getType() == 2){
+            field_ob[y,x] = Instantiate(t, roadsObj.transform);
+          }else if(field[y,x].getType() == 3){
+            field_ob[y,x] = Instantiate(cro, roadsObj.transform);
+          }
+          field_ob[y,x].transform.position = new Vector3(field[y,x].getX(),0,field[y,x].getY());
+          field_ob[y,x].transform.Rotate(0,field[y,x].getDeg(),0);
+        }
     }
+  }
     public void remakeField(){
       Destroy(roadsObj);
       this.roadsObj = Instantiate(roadsObj_p);
@@ -82,7 +98,7 @@ public class MakeField : MonoBehaviour
           field[y,x] = new Road(x,y,ran);
         }
       }
-      for(int y=0;y<Y;y++){
+      /*for(int y=0;y<Y;y++){
         for(int x = 0;x<X;x++){
           GameObject g;
           if(field[y,x].getType() == 0){
@@ -103,6 +119,21 @@ public class MakeField : MonoBehaviour
             g.transform.Rotate(0,field[y,x].getDeg(),0);
           }
         }
-      }
+      }*/
+      for(int y=0;y<Y;y++){
+        for(int x = 0;x<X;x++){
+          if(field[y,x].getType() == 0){
+            field_ob[y,x] = Instantiate(st, roadsObj.transform);
+          }else if(field[y,x].getType() == 1){
+            field_ob[y,x] = Instantiate(r, roadsObj.transform);
+          }else if(field[y,x].getType() == 2){
+            field_ob[y,x] = Instantiate(t, roadsObj.transform);
+          }else if(field[y,x].getType() == 3){
+            field_ob[y,x] = Instantiate(cro, roadsObj.transform);
+          }
+          field_ob[y,x].transform.position = new Vector3(field[y,x].getX(),0,field[y,x].getY());
+          field_ob[y,x].transform.Rotate(0,field[y,x].getDeg(),0);
+        }
+    }
     }
 }
