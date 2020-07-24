@@ -8,6 +8,9 @@ public class ControlField : MonoBehaviour
     public MakeField makeField;
     GameObject[,] field_ob;
     Road[,] road = new Road[3,5];
+
+    private bool flag_chang = false;
+    private int count_chang = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,20 +54,33 @@ public class ControlField : MonoBehaviour
           }
         }
       }
-      if(count == 2){
+      if(count == 2 && ! flag_chang){
         /*Road stb = road[y1,x1];
         road[y1,x1] = road[y2,x2];
         road[y2,x2] = stb;*/
 
         road[y2,x2].flag = false;
         road[y1,x1].flag = false;
-        field_ob[y1,x1].transform.position = new Vector3(x2,0,y2);
-        field_ob[y2,x2].transform.position = new Vector3(x1,0,y1);
 
-        GameObject stb = field_ob[y1,x1];
-        field_ob[y1,x1] = field_ob[y2,x2];
-        field_ob[y2,x2] = stb;
-        roadField();
+        flag_chang = true;
+      }
+      if(flag_chang){
+        float dx = (x1 - x2)/10;
+        float dy = (y1 - y2)/10;
+        field_ob[y1,x1].transform.Translate(-dx,0,-dy);
+        field_ob[y2,x2].transform.Translate(dx,0,dy);
+        count_chang += 1;
+        if(count_chang == 10){
+          field_ob[y1,x1].transform.position = new Vector3(x2,0,y2);
+          field_ob[y2,x2].transform.position = new Vector3(x1,0,y1);
+
+          GameObject stb = field_ob[y1,x1];
+          field_ob[y1,x1] = field_ob[y2,x2];
+          field_ob[y2,x2] = stb;
+          roadField();
+          flag_chang = false;
+          count_chang = 0;
+        }
       }
     }
 
