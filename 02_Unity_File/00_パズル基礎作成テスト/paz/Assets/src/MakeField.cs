@@ -11,16 +11,20 @@ public class MakeField : MonoBehaviour
     public GameObject t;
     public GameObject cro;
     Road[,] road = new Road[3,5];
-    readonly private int Y = 3;
-    readonly private int X = 5;
+    readonly public int Y = 3;
+    readonly public int X = 5;
     public GameObject[,] field_ob = new GameObject[3,5];
     public GameObject roadsObj_p;
     public GameObject roadsObj;
+
+    public GameObject control_ob;
+    public ControlField control_scr;
 
 
 
     void Awake(){
       makeField();
+      control_scr = control_ob.GetComponent<ControlField>();
     }
 
     void Start()
@@ -31,7 +35,7 @@ public class MakeField : MonoBehaviour
     void Update()
     {
       this.a += Time.deltaTime;
-      if(this.a >5){
+      if(this.a >30){
         this.a = 0;
         remakeField();
       }
@@ -142,5 +146,6 @@ public class MakeField : MonoBehaviour
           field_ob[y,x].transform.Rotate(0,field[y,x].getDeg(),0);
         }
     }*/
+    control_scr.roadField();
     }
 }
