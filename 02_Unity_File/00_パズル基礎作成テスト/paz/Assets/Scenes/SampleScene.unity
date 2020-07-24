@@ -469,6 +469,8 @@ MonoBehaviour:
   cro: {fileID: 3772095014182920656, guid: 50c699db4f859454abf3b5c93f3cb013, type: 3}
   roadsObj_p: {fileID: 1371321090}
   roadsObj: {fileID: 0}
+  control_ob: {fileID: 120421922}
+  control_scr: {fileID: 120421924}
 --- !u!4 &1108310735
 Transform:
   m_ObjectHideFlags: 0

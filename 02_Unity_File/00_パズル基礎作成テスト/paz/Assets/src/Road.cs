@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Road : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class Road : MonoBehaviour
   public int spin;//回転してるか0:デフォルト　そこから右回転で+1
   public int[] able;//そこが通れるか[l,u,r,d]
   public int next_road;//0:l,1:u,2:r,3:d
+  public bool flag = false;
 
     public int getType(){
       return this.type;
@@ -50,5 +52,14 @@ public class Road : MonoBehaviour
       }
     }
 
-
+    void OnMouseDown()
+    {
+      this.flag = true;
+      Vector3 pos = this.transform.position;
+      pos.y = 0.3f;
+      this.transform.position = pos;
+      if(flag){
+      Debug.Log(type);
+    }
+  }
 }
