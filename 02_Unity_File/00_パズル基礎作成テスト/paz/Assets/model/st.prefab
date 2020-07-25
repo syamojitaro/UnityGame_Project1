@@ -236,6 +236,7 @@ MonoBehaviour:
   spin: 0
   able: 
   next_road: 0
+  flag: 0
 --- !u!65 &7414794186391647663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -247,5 +248,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.2, z: 1}
+  m_Size: {x: 1, y: 0.25, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

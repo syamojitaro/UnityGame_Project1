@@ -59,7 +59,7 @@ public class Road : MonoBehaviour
       pos.y = 0.3f;
       this.transform.position = pos;
       if(flag){
-      Debug.Log(type);
+      //Debug.Log(type);
     }
   }
 }

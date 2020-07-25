@@ -8,9 +8,10 @@ public class ControlField : MonoBehaviour
     public MakeField makeField;
     GameObject[,] field_ob;
     Road[,] road = new Road[3,5];
-
+    //change の変数
     private bool flag_chang = false;
     private int count_chang = 0;
+    int x1=-1,y1=-1,x2=-1,y2=-1;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,6 @@ public class ControlField : MonoBehaviour
 
     void check(){
       int count = 0;
-      int x1=-1,y1=-1,x2=-1,y2=-1;
       for(int y = 0;y<makeField.Y;y++){
         for(int x = 0;x<makeField.X;x++){
           if(road[y,x].flag && count==0){
@@ -65,12 +65,14 @@ public class ControlField : MonoBehaviour
         flag_chang = true;
       }
       if(flag_chang){
-        float dx = (x1 - x2)/10;
-        float dy = (y1 - y2)/10;
-        field_ob[y1,x1].transform.Translate(-dx,0,-dy);
-        field_ob[y2,x2].transform.Translate(dx,0,dy);
+        float dx = (x1 - x2);
+        float dy = (y1 - y2);
+        Debug.Log(dx);
+        Debug.Log(dx);
+        field_ob[y1,x1].transform.Translate(-dx*0.05f,0,-dy*0.05f,Space.World);
+        field_ob[y2,x2].transform.Translate(dx*0.05f,0,dy*0.05f,Space.World);
         count_chang += 1;
-        if(count_chang == 10){
+        if(count_chang == 20){
           field_ob[y1,x1].transform.position = new Vector3(x2,0,y2);
           field_ob[y2,x2].transform.position = new Vector3(x1,0,y1);
 
