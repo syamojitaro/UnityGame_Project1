@@ -1,55 +1,16 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Road
+public class Road : MonoBehaviour
 {
-  private int x;
-  private int y;
-  private int type;//道路のたいぷ 0:まっすぐ 1:曲がる　2:t字 3:cros
-  private int spin;//回転してるか0:デフォルト　そこから右回転で+1
-  private int[] able;//そこが通れるか[l,u,r,d]
-  private int next_road;//0:l,1:u,2:r,3:d
+  public int type;//道路のたいぷ 0:まっすぐ 1:曲がる　2:t字 3:cros
+  public int spin;//回転してるか0:デフォルト　そこから右回転で+1
+  public int[] able;//そこが通れるか[l,u,r,d]
+  public int next_road;//0:l,1:u,2:r,3:d
+  public bool flag = false;
+  public bool flag2 = false;
 
-  public Road(int x,int y,int type){
-    this.x = x;
-    this.y = y;
-    this.type = type;
-    this.spin = Random.Range(0,4);
-    if(type == 0){
-      this.able = new int[4]{1,0,1,0};
-      this.next_road = 0;
-    }else if(type == 1){
-      this.able = new int[4]{1,0,0,1};
-      this.next_road = 0;
-    }else if(type == 2){
-      this.able = new int[4]{1,0,0,1};
-      this.next_road = 1;
-    }else if(type == 3){
-      this.able = new int[4]{1,1,0,1};
-      this.next_road = 2;
-    }
-    for(int ss= 0;ss<spin;ss++){
-        int stb = able[3];
-        for(int i = 3;i>0;i--){
-          this.able[i] = this.able[i-1];
-        }
-        this.able[0] = stb;
-        this.next_road = (1 + this.next_road)%4;
-    }
-  }
-
-    public void setX(int x){
-      this.x = x;
-    }
-    public void setY(int y){
-      this.y = y;
-    }
-    public int getX(){
-      return this.x;
-    }
-    public int getY(){
-      return this.y;
-    }
     public int getType(){
       return this.type;
     }
@@ -73,7 +34,7 @@ public class Road
       }
       return this.next_road;
     }
-    public void spinLoad(int r){//0:右回転　1:左回転
+    public void spinRoad(int r){//0:右回転　1:左回転
       if(r == 0){
         int stb = able[3];
         for(int i = 3;i>0;i--){
@@ -92,5 +53,22 @@ public class Road
       }
     }
 
-
+    public void flagReset(){
+      flag = false;
+      flag2 = false;
+    }
+    void OnMouseDown()
+    {
+      /*Debug.Log(able[0]);
+      Debug.Log(able[1]);
+      Debug.Log(able[2]);
+      Debug.Log(able[3]);*/
+      if(flag){
+        flag2 = true;
+      }
+      flag = true;
+      //Vector3 pos = this.transform.position;
+      //pos.y = 0.3f;
+      //this.transform.position = pos;
+  }
 }
