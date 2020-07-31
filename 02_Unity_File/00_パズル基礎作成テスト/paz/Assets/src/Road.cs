@@ -9,6 +9,7 @@ public class Road : MonoBehaviour
   public int[] able;//そこが通れるか[l,u,r,d]
   public int next_road;//0:l,1:u,2:r,3:d
   public bool flag = false;
+  public bool flag2 = false;
 
     public int getType(){
       return this.type;
@@ -33,7 +34,7 @@ public class Road : MonoBehaviour
       }
       return this.next_road;
     }
-    public void spinLoad(int r){//0:右回転　1:左回転
+    public void spinRoad(int r){//0:右回転　1:左回転
       if(r == 0){
         int stb = able[3];
         for(int i = 3;i>0;i--){
@@ -52,14 +53,22 @@ public class Road : MonoBehaviour
       }
     }
 
+    public void flagReset(){
+      flag = false;
+      flag2 = false;
+    }
     void OnMouseDown()
     {
-      this.flag = true;
-      Vector3 pos = this.transform.position;
-      pos.y = 0.3f;
-      this.transform.position = pos;
+      /*Debug.Log(able[0]);
+      Debug.Log(able[1]);
+      Debug.Log(able[2]);
+      Debug.Log(able[3]);*/
       if(flag){
-      //Debug.Log(type);
-    }
+        flag2 = true;
+      }
+      flag = true;
+      //Vector3 pos = this.transform.position;
+      //pos.y = 0.3f;
+      //this.transform.position = pos;
   }
 }

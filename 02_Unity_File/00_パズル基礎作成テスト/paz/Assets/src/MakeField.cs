@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MakeField : MonoBehaviour
 {
-  float a = 0;
     //kokopurehabu
     public GameObject st;
     public GameObject r;
@@ -34,11 +33,7 @@ public class MakeField : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      this.a += Time.deltaTime;
-      if(this.a >30){
-        this.a = 0;
-        remakeField();
-      }
+
     }
 
     public void makeField(){

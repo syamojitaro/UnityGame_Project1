@@ -7,8 +7,8 @@ public class Road_t : Road
   void Awake(){
   this.type = 2;
   this.spin = Random.Range(0,4);
-  this.able = new int[4]{1,0,1,0};
-  this.next_road = 0;
+  this.able = new int[4]{0,0,1,1};
+  this.next_road = 1;
   for(int ss= 0;ss<spin;ss++){
       int stb = able[3];
       for(int i = 3;i>0;i--){
