@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ControlChar : MonoBehaviour
 {
@@ -61,6 +62,9 @@ public class ControlChar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if(!(charas[0].life || charas[1].life || charas[2].life)){
+        SceneManager.LoadScene("GameOver");
+      }
       if(control_turn.getTurn() == 2){
         atkEn();
       }

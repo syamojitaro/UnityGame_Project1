@@ -5,7 +5,7 @@ using UnityEngine;
 public class Endlesenemy : MonoBehaviour
 {
   public GameObject enemy1;
-  float span = 0.2f;
+  float span = 0.4f;
   float del = 0;
     // Start is called before the first frame update
     // Update is called once per frame
