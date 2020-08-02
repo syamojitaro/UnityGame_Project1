@@ -240,6 +240,7 @@ MonoBehaviour:
   able: 
   next_road: 0
   flag: 0
+  flag2: 0
 --- !u!65 &6652487358780498011
 BoxCollider:
   m_ObjectHideFlags: 0
