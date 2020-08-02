@@ -13,6 +13,6 @@ public class TitleButton : MonoBehaviour
   public void OnClickStartButton()
   {
       audioSource.PlayOneShot(audio);
-      SceneManager.LoadScene("Battle");
+      SceneManager.LoadScene("Talk");
   }
 }

@@ -1524,6 +1524,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yusha: {fileID: 6422239466030215471, guid: 83238de07c3834b98bf50521873eeb66, type: 3}
+  mob1: {fileID: 6422239466030215471, guid: 03e17407e409147a7b6b6e224f5ef6c5, type: 3}
+  mob2: {fileID: 6422239466030215471, guid: e6ab7c816a89440e38075dbcaa94bd01, type: 3}
   enemy: {fileID: 7117380395322522130, guid: 7bc17e385f62f4d5daf2b722f3ed1283, type: 3}
   dai: {fileID: 8019927510238145389, guid: 9fb14b97ea0194a49876ad2aa7f26fae, type: 3}
   charas:

@@ -615,7 +615,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SapphiArtchan Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6592094144253754758, guid: 26a0e52bdd00e4c73bcd9234f164ddd9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 26a0e52bdd00e4c73bcd9234f164ddd9, type: 3}
 --- !u!1 &1605637434
 GameObject:

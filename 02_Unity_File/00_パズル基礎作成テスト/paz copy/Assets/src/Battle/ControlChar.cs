@@ -64,6 +64,8 @@ public class ControlChar : MonoBehaviour
     {
       if(!(charas[0].life || charas[1].life || charas[2].life)){
         SceneManager.LoadScene("GameOver");
+      }if(!(enemies[0].life || enemies[1].life || enemies[2].life)){
+        SceneManager.LoadScene("Clea");
       }
       if(control_turn.getTurn() == 2){
         atkEn();
@@ -81,8 +83,15 @@ public class ControlChar : MonoBehaviour
             moveMe(chara_ob[i],charas[i]);
           }
         }
-        if (!(charas[0].idou || charas[0].atk_flag || charas[1].idou || charas[1].atk_flag || charas[2].idou || charas[2].atk_flag)){
+        /*if (!(charas[0].idou || charas[0].atk_flag || charas[1].idou || charas[1].atk_flag || charas[2].idou || charas[2].atk_flag)){
           control_turn.changeTurn();
+        }*/
+        if (!(charas[0].idou || charas[0].atk_flag) || !charas[0].life){
+          if (!(charas[1].idou || charas[1].atk_flag) || !charas[1].life){
+            if (!(charas[2].idou || charas[2].atk_flag) || !charas[2].life){
+              control_turn.changeTurn();
+            }
+          }
         }
       }
       else if(control_turn.getTurn() == 0){

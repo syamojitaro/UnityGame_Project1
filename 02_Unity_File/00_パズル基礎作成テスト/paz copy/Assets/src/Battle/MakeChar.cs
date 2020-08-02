@@ -5,6 +5,9 @@ using UnityEngine;
 public class MakeChar : MonoBehaviour
 {
   public GameObject yusha;
+  public GameObject mob1;
+  public GameObject mob2;
+
   public GameObject enemy;
   public GameObject dai;
 
@@ -18,9 +21,9 @@ public class MakeChar : MonoBehaviour
     void Awake(){
       chara_ob[0] = Instantiate(yusha);
       charas[0] = chara_ob[0].GetComponent<CharBase>();
-      chara_ob[1] = Instantiate(yusha);
+      chara_ob[1] = Instantiate(mob1);
       charas[1] = chara_ob[1].GetComponent<CharBase>();
-      chara_ob[2] = Instantiate(yusha);
+      chara_ob[2] = Instantiate(mob2);
       charas[2] = chara_ob[2].GetComponent<CharBase>();
 
       enemy_ob[0] = Instantiate(enemy);

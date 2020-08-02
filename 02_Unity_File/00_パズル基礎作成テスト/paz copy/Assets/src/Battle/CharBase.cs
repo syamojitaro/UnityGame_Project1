@@ -108,6 +108,8 @@ public class CharBase : MonoBehaviour
     if(!life){
       transform.Translate(0,0.6f,0,Space.World);
       transform.Rotate(0,0,180);
+      idou = false;
+      atk_flag = false;
     }
   }
 }
