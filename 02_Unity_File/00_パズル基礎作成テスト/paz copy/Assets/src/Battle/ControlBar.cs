@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ControlBar : MonoBehaviour
 {
+  [SerializeField]UnityEngine.UI.Text textbox;
+  public Text text;
 
   Slider hp1;
   Slider hp2;
@@ -37,7 +39,8 @@ public class ControlBar : MonoBehaviour
     hp_en3.value = set6;
   }
 
-  public void setTime(float n){
+  public void setTime(float n,int nn){
+    textbox.text = nn.ToString();
     this.time_gage.GetComponent<Image>().fillAmount = n;
   }
   public void resetTime(){

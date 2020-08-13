@@ -46,7 +46,7 @@ public class ControlChar : MonoBehaviour
       charas = make_chara.charas;
       enemy_ob = make_chara.enemy_ob;
       enemies = make_chara.enemies;
-      time_all = (charas[0].getTime() + charas[1].getTime() + charas[2].getTime())*40;
+      time_all = (charas[0].getTime() + charas[1].getTime() + charas[2].getTime());
       audioSource = GetComponent<AudioSource>();
     }
     public void roadField(){
@@ -95,13 +95,16 @@ public class ControlChar : MonoBehaviour
         }
       }
       else if(control_turn.getTurn() == 0){
-        count_turn++;
-        control_bar.setTime(1-(float)count_turn/(float)time_all);
+        control_bar.setTime(1-(float)count_turn/(float)time_all,time_all-count_turn);
         if(count_turn == time_all){
           count_turn = 0;
           control_turn.changeTurn();
         }
       }
+    }
+
+    public void pulsTime(){
+      count_turn++;
     }
 
     public void moveMe(GameObject obj,CharBase src){

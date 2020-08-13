@@ -12,6 +12,8 @@ public class ControlField : MonoBehaviour
     // turn
     public GameObject controlTrun;
     public ControlTrun control_turn;
+    public GameObject controlChar;
+    public ControlChar control_char;
     //change の変数
     private bool flag_chang = false;
     private int count_chang = 0;
@@ -32,6 +34,7 @@ public class ControlField : MonoBehaviour
         }
       }
       control_turn = controlTrun.GetComponent<ControlTrun>();
+      control_char = controlChar.GetComponent<ControlChar>();
     }
 
     // Update is called once per frame
@@ -107,6 +110,8 @@ public class ControlField : MonoBehaviour
           roadField();
           flag_chang = false;
           count_chang = 0;
+
+          control_char.pulsTime();
         }
       }
     }
@@ -129,6 +134,7 @@ public class ControlField : MonoBehaviour
           flag_role = false;
           count_role = 0;
           road[y_r,x_r].spinRoad(0);
+          control_char.pulsTime();
         }
       }
     }
